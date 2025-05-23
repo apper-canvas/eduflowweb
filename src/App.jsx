@@ -4,6 +4,10 @@ import { ToastContainer } from 'react-toastify'
 import { motion, AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import FinancialDashboard from './pages/FinancialDashboard'
+import FeeManagement from './pages/FeeManagement'
+import PaymentProcessing from './pages/PaymentProcessing'
+import FinancialReports from './pages/FinancialReports'
 import ApperIcon from './components/ApperIcon'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -41,6 +45,30 @@ function App() {
                 </div>
               </motion.div>
               
+              <nav className="hidden lg:flex items-center space-x-8">
+                <a href="/" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+                  Home
+                </a>
+                <div className="relative group">
+                  <button className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors flex items-center gap-1">
+                    Financial
+                    <ApperIcon name="ChevronDown" className="w-4 h-4" />
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-surface-800 rounded-xl shadow-xl border border-surface-200 dark:border-surface-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <a href="/financial/dashboard" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700 rounded-t-xl">Dashboard</a>
+                    <a href="/financial/fees" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700">Fee Management</a>
+                    <a href="/financial/payments" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700">Payments</a>
+                    <a href="/financial/reports" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700 rounded-b-xl">Reports</a>
+                  </div>
+                </div>
+                <a href="/students" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+                  Students
+                </a>
+                <a href="/courses" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+                  Courses
+                </a>
+              </nav>
+              
               <motion.button
                 onClick={toggleDarkMode}
                 className="p-2 sm:p-3 rounded-xl bg-surface-100 hover:bg-surface-200 dark:bg-surface-700 dark:hover:bg-surface-600 transition-all duration-200 shadow-neu-light dark:shadow-neu-dark"
@@ -61,6 +89,10 @@ function App() {
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/financial/dashboard" element={<FinancialDashboard />} />
+              <Route path="/financial/fees" element={<FeeManagement />} />
+              <Route path="/financial/payments" element={<PaymentProcessing />} />
+              <Route path="/financial/reports" element={<FinancialReports />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

@@ -29,6 +29,18 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a'
+        },
+        financial: {
+          success: '#10B981',
+          warning: '#F59E0B',
+          error: '#EF4444',
+          pending: '#8B5CF6'
+        },
+        chart: {
+          primary: '#3B82F6',
+          secondary: '#8B5CF6',
+          tertiary: '#10B981',
+          quaternary: '#F59E0B'
         }
       },
       fontFamily: {

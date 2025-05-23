@@ -28,6 +28,12 @@ const Home = () => {
       title: "Analytics Dashboard",
       description: "Real-time insights and comprehensive reporting tools",
       color: "from-orange-500 to-red-500"
+    },
+    {
+      icon: "DollarSign",
+      title: "Financial Management",
+      description: "Complete fee tracking, payment processing, and financial reporting",
+      color: "from-emerald-500 to-teal-500"
     }
   ]
 
@@ -153,7 +159,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}

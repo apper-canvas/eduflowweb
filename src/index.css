@@ -93,3 +93,48 @@
 .Toastify__toast--warning {
   background: linear-gradient(135deg, #F59E0B, #D97706);
 }
+
+/* Financial module specific styles */
+.financial-card {
+  @apply bg-white dark:bg-surface-800 rounded-2xl shadow-card border border-surface-100 dark:border-surface-700 hover:shadow-xl transition-all duration-300;
+}
+
+.financial-metric {
+  @apply text-2xl font-bold text-surface-900 dark:text-white;
+}
+
+.financial-label {
+  @apply text-sm text-surface-600 dark:text-surface-400;
+}
+
+.currency-input {
+  @apply pl-8 pr-4 py-3 border border-surface-300 dark:border-surface-600 rounded-xl bg-white dark:bg-surface-800 text-surface-900 dark:text-white placeholder-surface-500 dark:placeholder-surface-400 focus:border-primary focus:ring-2 focus:ring-primary/20;
+}
+
+.payment-status-paid {
+  @apply bg-financial-success/10 text-financial-success border border-financial-success/20 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.payment-status-pending {
+  @apply bg-financial-pending/10 text-financial-pending border border-financial-pending/20 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.payment-status-overdue {
+  @apply bg-financial-error/10 text-financial-error border border-financial-error/20 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.financial-table {
+  @apply w-full border-collapse border-spacing-0;
+}
+
+.financial-table th {
+  @apply bg-surface-50 dark:bg-surface-700 text-surface-700 dark:text-surface-300 font-semibold text-left px-6 py-4 border-b border-surface-200 dark:border-surface-600;
+}
+
+.financial-table td {
+  @apply px-6 py-4 border-b border-surface-100 dark:border-surface-700 text-surface-900 dark:text-white;
+}
+
+.financial-table tr:hover {
+  @apply bg-surface-50 dark:bg-surface-700/50;
+}
