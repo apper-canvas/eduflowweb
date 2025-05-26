@@ -138,3 +138,189 @@
 .financial-table tr:hover {
   @apply bg-surface-50 dark:bg-surface-700/50;
 }
+
+/* Enhanced Button Styles */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-primary {
+  @apply bg-interactive-primary text-white border border-interactive-primary hover:bg-interactive-primary-hover hover:border-interactive-primary-hover active:bg-interactive-primary-active active:border-interactive-primary-active focus:ring-interactive-primary shadow-interactive hover:shadow-interactive-hover;
+}
+
+.btn-secondary {
+  @apply bg-interactive-secondary text-white border border-interactive-secondary hover:bg-interactive-secondary-hover hover:border-interactive-secondary-hover active:bg-interactive-secondary-active active:border-interactive-secondary-active focus:ring-interactive-secondary shadow-interactive hover:shadow-interactive-hover;
+}
+
+.btn-success {
+  @apply bg-interactive-success text-white border border-interactive-success hover:bg-interactive-success-hover hover:border-interactive-success-hover active:bg-interactive-success-active active:border-interactive-success-active focus:ring-interactive-success shadow-interactive hover:shadow-interactive-hover;
+}
+
+.btn-warning {
+  @apply bg-interactive-warning text-white border border-interactive-warning hover:bg-interactive-warning-hover hover:border-interactive-warning-hover active:bg-interactive-warning-active active:border-interactive-warning-active focus:ring-interactive-warning shadow-interactive hover:shadow-interactive-hover;
+}
+
+.btn-danger {
+  @apply bg-interactive-danger text-white border border-interactive-danger hover:bg-interactive-danger-hover hover:border-interactive-danger-hover active:bg-interactive-danger-active active:border-interactive-danger-active focus:ring-interactive-danger shadow-interactive hover:shadow-interactive-hover;
+}
+
+.btn-outline {
+  @apply bg-transparent text-interactive-primary border-2 border-interactive-primary hover:bg-interactive-primary hover:text-white active:bg-interactive-primary-active focus:ring-interactive-primary shadow-soft hover:shadow-interactive;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-interactive-primary border border-transparent hover:bg-interactive-primary/10 hover:border-interactive-primary/20 active:bg-interactive-primary/20 focus:ring-interactive-primary;
+}
+
+.btn-sm {
+  @apply px-3 py-2 text-sm rounded-lg;
+  min-height: 36px;
+  min-width: 36px;
+}
+
+.btn-md {
+  @apply px-4 py-3 text-base rounded-xl;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-lg {
+  @apply px-6 py-4 text-lg rounded-xl;
+  min-height: 52px;
+  min-width: 52px;
+}
+
+/* Enhanced Link Styles */
+.link {
+  @apply transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-interactive-primary rounded-md;
+}
+
+.link-primary {
+  @apply text-interactive-primary hover:text-interactive-primary-hover active:text-interactive-primary-active underline-offset-4 hover:underline;
+}
+
+.link-secondary {
+  @apply text-interactive-secondary hover:text-interactive-secondary-hover active:text-interactive-secondary-active underline-offset-4 hover:underline;
+}
+
+.link-nav {
+  @apply text-surface-600 hover:text-interactive-primary dark:text-surface-300 dark:hover:text-interactive-primary transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-interactive-primary/10 focus:bg-interactive-primary/10 focus:outline-none focus:ring-2 focus:ring-interactive-primary/20;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Enhanced Interactive Elements */
+.interactive-element {
+  @apply transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-interactive-primary rounded-lg;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.card-interactive {
+  @apply bg-white dark:bg-surface-800 rounded-2xl shadow-card border border-surface-100 dark:border-surface-700 hover:shadow-elevated hover:border-interactive-primary/30 dark:hover:border-interactive-primary/30 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-interactive-primary focus:ring-offset-2;
+}
+
+/* Enhanced Form Elements */
+.form-input {
+  @apply w-full px-4 py-3 border border-surface-300 dark:border-surface-600 rounded-xl bg-white dark:bg-surface-800 text-surface-900 dark:text-white placeholder-surface-500 dark:placeholder-surface-400 focus:border-interactive-primary focus:ring-2 focus:ring-interactive-primary/20 transition-all duration-200;
+  min-height: 44px;
+}
+
+.form-select {
+  @apply w-full px-4 py-3 border border-surface-300 dark:border-surface-600 rounded-xl bg-white dark:bg-surface-800 text-surface-900 dark:text-white focus:border-interactive-primary focus:ring-2 focus:ring-interactive-primary/20 transition-all duration-200;
+  min-height: 44px;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 border border-surface-300 dark:border-surface-600 rounded-xl bg-white dark:bg-surface-800 text-surface-900 dark:text-white placeholder-surface-500 dark:placeholder-surface-400 focus:border-interactive-primary focus:ring-2 focus:ring-interactive-primary/20 transition-all duration-200;
+  min-height: 88px;
+}
+
+/* Enhanced Navigation Dropdown */
+.nav-dropdown {
+  @apply absolute top-full left-0 mt-2 w-48 bg-white dark:bg-surface-800 rounded-xl shadow-elevated border border-surface-200 dark:border-surface-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50;
+}
+
+.nav-dropdown-item {
+  @apply block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-interactive-primary/10 hover:text-interactive-primary transition-colors duration-200 focus:bg-interactive-primary/10 focus:text-interactive-primary focus:outline-none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-item:first-child {
+  @apply rounded-t-xl;
+}
+
+.nav-dropdown-item:last-child {
+  @apply rounded-b-xl;
+}
+
+/* Enhanced Icon Buttons */
+.icon-btn {
+  @apply p-2 rounded-lg bg-surface-100 hover:bg-surface-200 dark:bg-surface-700 dark:hover:bg-surface-600 transition-all duration-200 shadow-soft hover:shadow-card focus:outline-none focus:ring-2 focus:ring-interactive-primary focus:ring-offset-1;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn-primary {
+  @apply p-2 rounded-lg bg-interactive-primary text-white hover:bg-interactive-primary-hover active:bg-interactive-primary-active transition-all duration-200 shadow-interactive hover:shadow-interactive-hover focus:outline-none focus:ring-2 focus:ring-interactive-primary focus:ring-offset-1;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.focus-visible {
+  @apply focus:outline-none focus:ring-2 focus:ring-interactive-primary focus:ring-offset-2 rounded-lg;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    @apply border-2 border-interactive-primary;
+  }
+  
+  .btn-outline {
+    @apply border-2;
+  }
+  
+  .link-primary {
+    @apply underline;
+  }
+  
+  .form-input, .form-select, .form-textarea {
+    @apply border-2;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .link, .interactive-element, .card-interactive, .form-input, .form-select, .form-textarea, .nav-dropdown, .nav-dropdown-item, .icon-btn, .icon-btn-primary {
+    @apply transition-none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .btn, .icon-btn, .icon-btn-primary {
+    @apply shadow-none border border-gray-400;
+  }
+  
+  .nav-dropdown {
+    @apply hidden;
+  }
+}

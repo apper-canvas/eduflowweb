@@ -48,42 +48,56 @@ function App() {
                 </div>
               </motion.div>
               
-              <nav className="hidden lg:flex items-center space-x-8">
-                <a href="/" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+              <nav className="hidden lg:flex items-center space-x-2">
+                <a href="/" className="link-nav">
                   Home
                 </a>
                 <div className="relative group">
-                  <button className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors flex items-center gap-1">
+                  <button className="link-nav flex items-center gap-1">
                     Financial
                     <ApperIcon name="ChevronDown" className="w-4 h-4" />
                   </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-surface-800 rounded-xl shadow-xl border border-surface-200 dark:border-surface-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="/financial/dashboard" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700 rounded-t-xl">Dashboard</a>
-                    <a href="/financial/fees" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700">Fee Management</a>
-                    <a href="/financial/payments" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700">Payments</a>
-                    <a href="/financial/reports" className="block px-4 py-3 text-sm text-surface-600 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700 rounded-b-xl">Reports</a>
+                  <div className="nav-dropdown">
+                    <a href="/financial/dashboard" className="nav-dropdown-item">
+                      <ApperIcon name="BarChart3" className="w-4 h-4 mr-2" />
+                      Dashboard
+                    </a>
+                    <a href="/financial/fees" className="nav-dropdown-item">
+                      <ApperIcon name="DollarSign" className="w-4 h-4 mr-2" />
+                      Fee Management
+                    </a>
+                    <a href="/financial/payments" className="nav-dropdown-item">
+                      <ApperIcon name="CreditCard" className="w-4 h-4 mr-2" />
+                      Payments
+                    </a>
+                    <a href="/financial/reports" className="nav-dropdown-item">
+                      <ApperIcon name="FileText" className="w-4 h-4 mr-2" />
+                      Reports
+                    </a>
                   </div>
                 </div>
-                <a href="/students" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+                <a href="/students" className="link-nav">
+                  <ApperIcon name="Users" className="w-4 h-4 mr-2" />
                   Students
                 </a>
-                <a href="/courses" className="text-surface-600 hover:text-primary dark:text-surface-300 dark:hover:text-primary transition-colors">
+                <a href="/courses" className="link-nav">
+                  <ApperIcon name="BookOpen" className="w-4 h-4 mr-2" />
                   Courses
                 </a>
               </nav>
               
               <motion.button
                 onClick={toggleDarkMode}
-                className="p-2 sm:p-3 rounded-xl bg-surface-100 hover:bg-surface-200 dark:bg-surface-700 dark:hover:bg-surface-600 transition-all duration-200 shadow-neu-light dark:shadow-neu-dark"
+                className="icon-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
               >
                 <ApperIcon 
                   name={darkMode ? "Sun" : "Moon"} 
                   className="w-5 h-5 text-surface-600 dark:text-surface-300" 
                 />
               </motion.button>
-            </div>
           </div>
         </header>
 
