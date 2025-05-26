@@ -9,6 +9,8 @@ import FeeManagement from './pages/FeeManagement'
 import PaymentProcessing from './pages/PaymentProcessing'
 import FinancialReports from './pages/FinancialReports'
 import Students from './pages/Students'
+import Courses from './pages/Courses'
+
 import ApperIcon from './components/ApperIcon'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -95,6 +97,8 @@ function App() {
               <Route path="/financial/payments" element={<PaymentProcessing />} />
               <Route path="/financial/reports" element={<FinancialReports />} />
               <Route path="/students" element={<Students />} />
+              <Route path="/courses" element={<Courses />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
