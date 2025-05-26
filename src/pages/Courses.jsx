@@ -547,7 +547,32 @@ const CourseModal = ({ isOpen, onClose, onSubmit, course, title, loading }) => {
   }
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  const departments = ['Computer Science', 'Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'History', 'Economics']
+  const departments = [
+    'Computer Science',
+    'Mathematics', 
+    'English',
+    'Physics',
+    'Chemistry',
+    'Biology',
+    'History',
+    'Economics',
+    'Business Administration',
+    'Psychology',
+    'Political Science',
+    'Sociology',
+    'Philosophy',
+    'Art',
+    'Music',
+    'Theater',
+    'Engineering',
+    'Nursing',
+    'Education',
+    'Communications',
+    'Foreign Languages',
+    'Geography',
+    'Anthropology',
+    'Criminal Justice'
+  ]
   const semesters = ['Fall 2024', 'Spring 2025', 'Summer 2025', 'Fall 2025']
 
   if (!isOpen) return null
