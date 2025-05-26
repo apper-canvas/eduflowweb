@@ -99,7 +99,8 @@ function App() {
                 />
               </motion.button>
           </div>
-        </header>
+          </div>
+
 
         {/* Main Content */}
         <main className="relative">
